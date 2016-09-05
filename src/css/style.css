@@ -586,7 +586,7 @@ body {
   transition: all 0.3s cubic-bezier(0.52, 0.55, 0.55, 1); }
 
 body > .wrapper {
-  display: none; }
+  /*display: none;*/ }
 
 body.pg-loaded > .wrapper {
   display: block; }
@@ -601,3 +601,26 @@ body.pg-loaded > .wrapper {
   right: 66%;
   left: 33%;
   bottom: 50%; }
+
+.bxslide img {
+  width: 100vw; }
+
+.white-wrapper {
+  background-color: #FFF; }
+
+.pager-wrapper {
+  /*display: none;*/ }
+
+.top-panel {
+  background-color: #fff;
+  height: 130vh;
+  width: 100vw;
+  position: absolute;
+  top: 50vh;
+  z-index: 444; }
+
+.top-panel:after {
+  content: '';
+  background-color: blue;
+  position: absolute;
+  top: 0; }

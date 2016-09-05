@@ -3,6 +3,7 @@
 "use strict";
 	var	lost = require("lost");
 	var	postcss = require('gulp-postcss');
+    var gutil = require('gulp-util');
     var sass = require('gulp-sass');
     var browserSync = require('browser-sync');
     var reload = browserSync.reload;
@@ -28,7 +29,9 @@ var gulp = require( "gulp" ),
 		/** Vue */
         "src/bower_components/vue/dist/vue.min.js",
 		/**  scripts */
-		"src/js/app.js"
+		//"src/js/app.js",
+		/**  bx */
+		//"src/js/bxs.js"
 	],
 	/** @type {Object of Array} CSS source files to concatenate and minify */
 	cssminSrc = {
@@ -116,7 +119,7 @@ gulp.task("browser-sync",function () {
         proxy: "localhost/wordpress/voilarts",
         //proxy: "localhost/voilarts",
         notify: false,
-        browser:  "ffx",
+        //browser:  "ffx",
         ghostMode:true
     });
 });
@@ -164,6 +167,7 @@ gulp.task( "template", function() {
 gulp.task( "uglify", function() {
 	return gulp.src( uglifySrc )
 		.pipe( $.concat( "scripts.min.js" ) )
+        .pipe($.uglify().on('error', gutil.log))
 		.pipe( $.uglify() )
 		.pipe( gulp.dest( "dist/js" ) );
 });

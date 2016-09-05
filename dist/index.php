@@ -1,5 +1,8 @@
 <?php get_header(); ?>
-
+<?php echo do_shortcode( '[gallery ids="4,5,6"]' );?>
+<div class="top-panel">
+<h3>Some</h3>
+</div>
     <div class="white-wrap">
         <div id="app">
 

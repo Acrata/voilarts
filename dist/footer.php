@@ -15,7 +15,20 @@
 		<!-- /wrapper -->
 
 		<?php wp_footer(); ?>
+            <script>
+      //window.loading_screen = window.pleaseWait({
+        //logo: "<?php echo get_template_directory_uri(); ?>/img/logo-web.svg",
+        //backgroundColor: '#bcbdbc',
+        //loadingHtml: "<div class='preload-juggle'><div class='ball'></div><div class='ball'></div><div class='ball'></div></div>"
+      //});
 
+        $("#trigger").click(function(event) {
+        var wrapper = document.getElementById('wrapper');
+            event.preventDefault();
+        classie.toggleClass(document.getElementById('wrapper'),'is-open');
+            console.log(classie);
+});
+    </script>
 		<!-- analytics -->
 		<script>
 		(function(f,i,r,e,s,h,l){i['GoogleAnalyticsObject']=s;f[s]=f[s]||function(){

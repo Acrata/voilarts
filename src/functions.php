@@ -107,6 +107,9 @@ function html5blank_footer_scripts()
             // Bxs
             wp_register_script('bxs', get_template_directory_uri() . '/js/bxs.js', array(), '1.0.0');
 
+            // Classie
+            wp_register_script('classie', get_template_directory_uri() . '/bower_components/classie/classie.js', array(), '1.0.0');
+
             // Custom scripts
             wp_register_script(
                 'app',
@@ -115,6 +118,7 @@ function html5blank_footer_scripts()
                     'vuejs',
                     'vue-resource',
                     'pleasew',
+                    'classie',
                     'bxs',
                     'vue-route'),
                 '1.0.0',

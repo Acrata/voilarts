@@ -32,8 +32,7 @@
 	<body <?php body_class(); ?>>
 
 		<!-- wrapper -->
-		<div class="wrapper lide">
-
+		<div class="wrapper lide" id="wrapper">
 					<!-- nav -->
 					<nav class="nav menur" role="navigation">
 					<!-- logo -->
@@ -56,10 +55,10 @@
 					</nav>
 			<!-- header -->
 			<header class="header clear" role="banner">
-                <div class="fleche">
-                  <button class="trigger" id="trigger">
+                <div class="fleche" id="trigger">
+                  <p class="trigger" >
                     Menu <span></span>
-                  </button>
+                  </p>
                 </div>
 					<!-- logo -->
 					<div class="logo">
@@ -75,3 +74,4 @@
             <slide></slide>
 			</header>
 			<!-- /header -->
+            <?php wd_slider(1); ?>
